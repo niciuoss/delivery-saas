@@ -1,14 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '@/assets/Logo.png'
+// import Logo from '@/assets/Logo.png'
 import { IoSearch } from 'react-icons/io5'
 import { FaBasketShopping } from 'react-icons/fa6'
 import { MdOutlineFavoriteBorder } from 'react-icons/md'
+import { MenuSheet } from './menu-sheet'
 
 export default function Header() {
   return (
-    <div className="relative flex items-center justify-between bg-primary pr-4 pl-4">
+    <div className="relative flex items-center justify-between bg-primary pr-4 pl-4 z-10">
       <div className="flex items-center gap-5">
+        <MenuSheet />
         <Link href="/" className="text-2xl font-extrabold text-white">
           FoodDelivery
         </Link>
@@ -21,17 +23,15 @@ export default function Header() {
           />
         </form>
       </div>
-
-      <div className="absolute inset-0 flex items-center justify-center">
+      {/* <div className="absolute inset-0 flex items-center justify-center">
         <Image
           src={Logo}
           alt="Logo"
           width={100}
           height={100}
-          className="rounded-full h-16 w-16"
+          className="rounded-full h-16 w-16 z-0"
         />
-      </div>
-
+      </div> */}
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-4">
           <MdOutlineFavoriteBorder className="h-5 w-5 text-white" />
