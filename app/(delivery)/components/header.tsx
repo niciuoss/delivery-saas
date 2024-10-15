@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import Image from 'next/image'
 // import Logo from '@/assets/Logo.png'
 import { IoSearch } from 'react-icons/io5'
 import { FaBasketShopping } from 'react-icons/fa6'
 import { MdOutlineFavoriteBorder } from 'react-icons/md'
 import { MenuSheet } from './menu-sheet'
+import { AccountMenu } from './account-menu'
 
 export default function Header() {
   return (
@@ -36,15 +36,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <MdOutlineFavoriteBorder className="h-5 w-5 text-white" />
           <FaBasketShopping className="h-5 w-5 text-white" />
-          <Link href="/account" className="hover:underline">
-            <Image
-              src="https://github.com/niciuoss.png"
-              className="h-8 w-8 rounded-full border-2 border-orange-800"
-              width={24}
-              height={24}
-              alt=""
-            />
-          </Link>
+          <AccountMenu />
         </div>
       </div>
     </div>
