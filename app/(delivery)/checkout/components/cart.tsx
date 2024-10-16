@@ -4,31 +4,30 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import Image from "next/image";
-import Produto from "@/assets/image-food.jpg";
-import QuantitySelector from "@/components/Quantity-Selector";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { useState } from 'react'
+import Image from 'next/image'
+import Produto from '@/assets/image-food.jpg'
+import QuantitySelector from '@/components/Quantity-Selector'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/free-mode'
+import 'swiper/css/navigation'
 
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination } from 'swiper/modules'
 
 export default function Cart() {
-  const [cupom, setCupom] = useState("");
-  const produtos = 2435.8;
-  const desconto = 365.37;
-  const total = produtos - desconto;
+  const [cupom, setCupom] = useState('')
+  const produtos = 2435.8
+  const desconto = 365.37
+  const total = produtos - desconto
 
   const aplicarCupom = () => {
-    
-    console.log("Cupom aplicado:", cupom);
-  };
+    console.log('Cupom aplicado:', cupom)
+  }
   return (
     <article className="flex flex-col md:flex-row w-full max-w-[1440px] gap-6 justify-center">
       <div className="w-full pb-[170px] flex flex-col p-2 md:p-6 gap-2 bg-white">
@@ -58,9 +57,9 @@ export default function Cart() {
                 </CardContent>
                 <CardFooter className="flex flex-col p-0 justify-between items-end">
                   <span className="text-gray-500 text-sm">
-                    {new Intl.NumberFormat("pt-BR", {
-                      style: "currency",
-                      currency: "BRL",
+                    {new Intl.NumberFormat('pt-BR', {
+                      style: 'currency',
+                      currency: 'BRL',
                     }).format(produtos)}
                   </span>
                   <QuantitySelector />
@@ -91,9 +90,9 @@ export default function Cart() {
                 <div>
                   <span>Produto</span>
                   <div>
-                    {new Intl.NumberFormat("pt-BR", {
-                      style: "currency",
-                      currency: "BRL",
+                    {new Intl.NumberFormat('pt-BR', {
+                      style: 'currency',
+                      currency: 'BRL',
                     }).format(produtos)}
                   </div>
                   <Button className="w-full mt-3">Adicionar</Button>
@@ -170,5 +169,5 @@ export default function Cart() {
         </CardContent>
       </Card>
     </article>
-  );
+  )
 }

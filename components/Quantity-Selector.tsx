@@ -1,18 +1,18 @@
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { Button } from '@/components/ui/button'
+import { useState } from 'react'
 
 const QuantitySelector = () => {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1)
 
   const handleIncrease = () => {
-    setQuantity(quantity + 1);
-  };
+    setQuantity(quantity + 1)
+  }
 
   const handleDecrease = () => {
     if (quantity > 1) {
-      setQuantity(quantity - 1);
+      setQuantity(quantity - 1)
     }
-  };
+  }
 
   return (
     <div className="relative flex items-center gap-2 bg-white">
@@ -26,7 +26,7 @@ const QuantitySelector = () => {
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default QuantitySelector;
+export default QuantitySelector
